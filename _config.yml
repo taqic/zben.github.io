@@ -1,53 +1,44 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 title: Zbens
-email: matt@zbens.com
-description: > # this means to ignore newlines until "baseurl:"
-  Yet another Jekyll theme. It is designed for business purpose and ported by 
-  Melvin Ch'ng.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+description: 设计电子与软件解决问题
+url: https://zbens.com
+lang: zh-CN
 
-# Company Information
-company_name: Zbens/TBD
-address_line: Room A of 602,1500 Long Wu Road, Xuhui District, Shanghai, China
-telephone_number: 1.800.245.356
-fax_number: 1.800.245.357
-company_email: matt@zbens.com
-google_map: https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3618.727010735933!2d91.837871!3d24.907291700000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1404919738144
+# 使用 H2O 主题（远程）
+remote_theme: kaeyleo/jekyll-theme-H2O
 
-# Social Link
-facebook_link: http://www.facebook.com
-twitter_link: http://www.twitter.com
-linkedin_link: http://www.linkedin.com
-googleplus_link: http://plus.google.com
-
-# Build settings
-markdown: kramdown
+# 插件
 plugins:
+  - jekyll-remote-theme
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# 分页（博客）
+paginate: 10
+paginate_path: "/blog/page:num/"
+
+# 导航（尽量与主题适配；多数主题支持 header_pages）
+header_pages:
+  - index.md
+  - products/index.md
+  - about.md
+  - team.md
+  - contact.md
+  - blog.md
+  - privacy/index.md
+
+# 其他常见配置
+markdown: kramdown
+kramdown:
+  input: GFM
+permalink: pretty
+
+# SEO 基础信息
+author:
+  name: Zbens
+  email: matt@zbens.com
+
+# 社交（可按需补充）
+# social:
+#   github: zbens
+#   twitter: zbens
