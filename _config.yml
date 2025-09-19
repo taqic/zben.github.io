@@ -1,0 +1,44 @@
+title: Zbens
+description: 设计电子与软件解决问题
+url: https://zbens.com
+lang: zh-CN
+
+# 使用 H2O 主题（远程）
+remote_theme: kaeyleo/jekyll-theme-H2O
+
+# 插件
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+# 分页（博客）
+paginate: 10
+paginate_path: "/blog/page:num/"
+
+# 导航（尽量与主题适配；多数主题支持 header_pages）
+header_pages:
+  - index.md
+  - products/index.md
+  - about.md
+  - team.md
+  - contact.md
+  - blog.md
+  - privacy/index.md
+
+# 其他常见配置
+markdown: kramdown
+kramdown:
+  input: GFM
+permalink: pretty
+
+# SEO 基础信息
+author:
+  name: Zbens
+  email: matt@zbens.com
+
+# 社交（可按需补充）
+# social:
+#   github: zbens
+#   twitter: zbens
