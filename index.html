@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZBENS - Electronics Development</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <span class="text-xl font-bold text-indigo-600">ZBENS</span>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="#" class="border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
+                        <a href="#products" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Products</a>
+                        <a href="#about" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">About</a>
+                        <a href="#contact" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                    <a href="mailto:matt@zbens.com" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-all">Contact Us</a>
+                </div>
+                <div class="-mr-2 flex items-center sm:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="sm:hidden hidden" id="mobile-menu">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="#" class="bg-indigo-50 border-indigo-500 text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Home</a>
+                <a href="#products" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Products</a>
+                <a href="#about" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">About</a>
+                <a href="#contact" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Contact</a>
+                <a href="mailto:matt@zbens.com" class="block pl-3 pr-4 py-2 text-base font-medium text-gray-500 hover:text-gray-700 hover:bg-gray-50">Email Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-gradient pt-24 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
+                <div class="mb-12 lg:mb-0" data-aos="fade-right">
+                    <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                        <span class="block">Innovative</span>
+                        <span class="block text-indigo-600">Electronics Solutions</span>
+                    </h1>
+                    <p class="mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl">
+                        We design and develop cutting-edge electronic products and software solutions tailored to your needs.
+                    </p>
+                    <div class="mt-10 sm:flex sm:justify-center lg:justify-start">
+                        <div class="rounded-md shadow">
+                            <a href="#products" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10 transition-all">
+                                Our Products
+                            </a>
+                        </div>
+                        <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
+                            <a href="#contact" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10 transition-all">
+                                Contact Us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <div class="w-full h-64 bg-gray-200 rounded-lg shadow-xl flex items-center justify-center">
+                        <i data-feather="cpu" class="h-24 w-24 text-gray-400"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Products Section -->
+    <div id="products" class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Products</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Our Development Portfolio
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    Explore our range of innovative electronic products and software solutions.
+                </p>
+            </div>
+
+            <div class="mt-10">
+                <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+                    <!-- Product 1 -->
+                    <div class="feature-card relative bg-white p-6 rounded-lg shadow-md transition-all" data-aos="fade-up">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-indigo-500 rounded-md p-3">
+                                <i data-feather="smartphone" class="text-white h-6 w-6"></i>
+                            </div>
+                            <div class="ml-5">
+                                <h3 class="text-lg leading-6 font-medium text-gray-900">Mobile Applications</h3>
+                            </div>
+                        </div>
+                        <div class="mt-5">
+                            <p class="text-gray-500">
+                                Innovative mobile applications designed for performance and user experience.
+                            </p>
+                            <div class="mt-4">
+                                <a href="mobile-apps.html" class="text-indigo-600 hover:text-indigo-500 font-medium">View apps <span aria-hidden="true">&rarr;</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="feature-card relative bg-white p-6 rounded-lg shadow-md transition-all" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-indigo-500 rounded-md p-3">
+                                <i data-feather="monitor" class="text-white h-6 w-6"></i>
+                            </div>
+                            <div class="ml-5">
+                                <h3 class="text-lg leading-6 font-medium text-gray-900">PC Applications</h3>
+                            </div>
+                        </div>
+                        <div class="mt-5">
+                            <p class="text-gray-500">
+                                Powerful desktop applications built for productivity and specialized tasks.
+                            </p>
+                            <div class="mt-4">
+                                <a href="pc-apps.html" class="text-indigo-600 hover:text-indigo-500 font-medium">View applications <span aria-hidden="true">&rarr;</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="feature-card relative bg-white p-6 rounded-lg shadow-md transition-all" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-indigo-500 rounded-md p-3">
+                                <i data-feather="cpu" class="text-white h-6 w-6"></i>
+                            </div>
+                            <div class="ml-5">
+                                <h3 class="text-lg leading-6 font-medium text-gray-900">Electronic Devices</h3>
+                            </div>
+                        </div>
+                        <div class="mt-5">
+                            <p class="text-gray-500">
+                                Custom electronic hardware solutions for various industrial and consumer applications.
+                            </p>
+                            <div class="mt-4">
+                                <a href="electronics.html" class="text-indigo-600 hover:text-indigo-500 font-medium">View devices <span aria-hidden="true">&rarr;</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="feature-card relative bg-white p-6 rounded-lg shadow-md transition-all" data-aos="fade-up" data-aos-delay="300">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-indigo-500 rounded-md p-3">
+                                <i data-feather="cloud" class="text-white h-6 w-6"></i>
+                            </div>
+                            <div class="ml-5">
+                                <h3 class="text-lg leading-6 font-medium text-gray-900">IoT Solutions</h3>
+                            </div>
+                        </div>
+                        <div class="mt-5">
+                            <p class="text-gray-500">
+                                Connected devices and IoT platforms for smart home and industrial applications.
+                            </p>
+                            <div class="mt-4">
+                                <a href="iot.html" class="text-indigo-600 hover:text-indigo-500 font-medium">View solutions <span aria-hidden="true">&rarr;</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center mb-12">
+                <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">About Us</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Our Expertise in Electronics
+                </p>
+            </div>
+            <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
+                <div class="mb-8 lg:mb-0" data-aos="fade-right">
+                    <div class="w-full h-64 bg-gray-200 rounded-lg shadow-xl flex items-center justify-center">
+                        <i data-feather="users" class="h-24 w-24 text-gray-400"></i>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Who We Are</h3>
+                    <p class="text-gray-500 mb-4">
+                        ZBENS is a team of passionate engineers and developers dedicated to creating innovative electronic products and software solutions. With years of experience in the industry, we combine technical expertise with creative problem-solving to deliver exceptional results.
+                    </p>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 mt-8">Our Approach</h3>
+                    <p class="text-gray-500 mb-4">
+                        We believe in a user-centered design approach, ensuring our products are not only technically sound but also intuitive and enjoyable to use. From concept to production, we maintain the highest standards of quality and performance.
+                    </p>
+                    <div class="mt-6">
+                        <a href="#contact" class="text-indigo-600 hover:text-indigo-500 font-medium">Get in touch to discuss your project <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center mb-12">
+                <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Contact</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Get In Touch
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    Have a project in mind or questions about our products? We'd love to hear from you.
+                </p>
+            </div>
+            <div class="mt-10 sm:mt-12">
+                <div class="bg-white shadow-xl rounded-lg overflow-hidden">
+                    <div class="px-6 py-8 sm:p-10">
+                        <div class="grid grid-cols-1 gap-y-6 gap-x-8 sm:grid-cols-2">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                                <div class="mt-1">
+                                    <input type="text" name="name" id="name" autocomplete="name" class="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                                <div class="mt-1">
+                                    <input type="email" name="email" id="email" autocomplete="email" class="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
+                                </div>
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
+                                <div class="mt-1">
+                                    <input type="text" name="subject" id="subject" class="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
+                                </div>
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                                <div class="mt-1">
+                                    <textarea id="message" name="message" rows="4" class="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all">
+                                Send Message
+                            </button>
+                        </div>
+                    </div>
+                    <div class="px-6 py-4 bg-gray-50 sm:px-10">
+                        <p class="text-xs text-gray-500">By submitting this form, you agree to our <a href="privacy.html" class="text-indigo-600 hover:text-indigo-500">Privacy Policy</a>.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-200 pt-8">
+                <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                    <div>
+                        <h3 class="text-sm font-medium text-gray-900">Email</h3>
+                        <div class="mt-2">
+                            <a href="mailto:matt@zbens.com" class="text-base text-indigo-600 hover:text-indigo-500">matt@zbens.com</a>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-medium text-gray-900">Website</h3>
+                        <div class="mt-2">
+                            <a href="https://zbens.com" class="text-base text-indigo-600 hover:text-indigo-500">zbens.com</a>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-medium text-gray-900">Privacy</h3>
+                        <div class="mt-2">
+                            <a href="privacy.html" class="text-base text-indigo-600 hover:text-indigo-500">Privacy Policy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Products</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="mobile-apps.html" class="text-base text-gray-300 hover:text-white">Mobile Apps</a></li>
+                        <li><a href="pc-apps.html" class="text-base text-gray-300 hover:text-white">PC Applications</a></li>
+                        <li><a href="electronics.html" class="text-base text-gray-300 hover:text-white">Electronics</a></li>
+                        <li><a href="iot.html" class="text-base text-gray-300 hover:text-white">IoT Solutions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Company</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#about" class="text-base text-gray-300 hover:text-white">About</a></li>
+                        <li><a href="#contact" class="text-base text-gray-300 hover:text-white">Contact</a></li>
+                        <li><a href="careers.html" class="text-base text-gray-300 hover:text-white">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Legal</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="privacy.html" class="text-base text-gray-300 hover:text-white">Privacy</a></li>
+                        <li><a href="terms.html" class="text-base text-gray-300 hover:text-white">Terms</a></li>
+                        <li><a href="cookies.html" class="text-base text-gray-300 hover:text-white">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Connect</h3>
+                    <div class="mt-4 flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="twitter" class="h-6 w-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="facebook" class="h-6 w-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="github" class="h-6 w-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="linkedin" class="h-6 w-6"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
+                <div class="flex space-x-6 md:order-2">
+                    <a href="privacy-app1.html" class="text-sm text-gray-400 hover:text-white">Smart Noise Monitor Privacy</a>
+                    <a href="privacy-app2.html" class="text-sm text-gray-400 hover:text-white">App 2 Privacy</a>
+                    <a href="privacy-app3.html" class="text-sm text-gray-400 hover:text-white">App 3 Privacy</a>
+                </div>
+                <p class="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
+                    &copy; 2023 ZBENS. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                feather.replace();
+            } else {
+                menu.classList.add('hidden');
+            }
+        });
+
+        // Initialize animations
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Replace icons
+        feather.replace();
+    </script>
+</body>
+</html>
