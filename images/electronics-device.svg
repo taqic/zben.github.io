@@ -1,0 +1,103 @@
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="deviceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#374151;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1f2937;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="chipGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="ledGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Device body -->
+  <rect x="50" y="50" width="200" height="200" fill="url(#deviceGradient)" rx="20"/>
+  <rect x="60" y="60" width="180" height="180" fill="none" stroke="#6b7280" stroke-width="2" rx="15"/>
+  
+  <!-- Main circuit board -->
+  <rect x="80" y="80" width="140" height="100" fill="#1f2937" rx="8"/>
+  
+  <!-- Central processor chip -->
+  <rect x="120" y="110" width="60" height="40" fill="url(#chipGradient)" rx="4"/>
+  <rect x="125" y="115" width="50" height="30" fill="none" stroke="white" stroke-width="1" rx="2"/>
+  
+  <!-- Chip pins -->
+  <g stroke="white" stroke-width="1">
+    <line x1="120" y1="120" x2="115" y2="120"/>
+    <line x1="120" y1="130" x2="115" y2="130"/>
+    <line x1="120" y1="140" x2="115" y2="140"/>
+    <line x1="180" y1="120" x2="185" y2="120"/>
+    <line x1="180" y1="130" x2="185" y2="130"/>
+    <line x1="180" y1="140" x2="185" y2="140"/>
+  </g>
+  
+  <!-- Circuit traces -->
+  <g stroke="#10b981" stroke-width="2" opacity="0.8">
+    <line x1="115" y1="120" x2="100" y2="120"/>
+    <line x1="115" y1="130" x2="100" y2="130"/>
+    <line x1="115" y1="140" x2="100" y2="140"/>
+    <line x1="185" y1="120" x2="200" y2="120"/>
+    <line x1="185" y1="130" x2="200" y2="130"/>
+    <line x1="185" y1="140" x2="200" y2="140"/>
+  </g>
+  
+  <!-- Resistors -->
+  <rect x="90" y="115" width="8" height="3" fill="#f59e0b" rx="1"/>
+  <rect x="90" y="125" width="8" height="3" fill="#f59e0b" rx="1"/>
+  <rect x="90" y="135" width="8" height="3" fill="#f59e0b" rx="1"/>
+  
+  <rect x="202" y="115" width="8" height="3" fill="#f59e0b" rx="1"/>
+  <rect x="202" y="125" width="8" height="3" fill="#f59e0b" rx="1"/>
+  <rect x="202" y="135" width="8" height="3" fill="#f59e0b" rx="1"/>
+  
+  <!-- Capacitors -->
+  <rect x="95" y="120" width="2" height="10" fill="#ef4444"/>
+  <rect x="98" y="120" width="2" height="10" fill="#ef4444"/>
+  <rect x="200" y="120" width="2" height="10" fill="#ef4444"/>
+  <rect x="203" y="120" width="2" height="10" fill="#ef4444"/>
+  
+  <!-- LEDs -->
+  <circle cx="100" cy="160" r="4" fill="url(#ledGradient)">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="200" cy="160" r="4" fill="url(#ledGradient)">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="1s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Connection ports -->
+  <rect x="40" y="120" width="15" height="8" fill="#6b7280" rx="2"/>
+  <rect x="40" y="135" width="15" height="8" fill="#6b7280" rx="2"/>
+  <rect x="245" y="120" width="15" height="8" fill="#6b7280" rx="2"/>
+  <rect x="245" y="135" width="15" height="8" fill="#6b7280" rx="2"/>
+  
+  <!-- Antenna -->
+  <line x1="150" y="60" x2="150" y="40" stroke="#6b7280" stroke-width="3"/>
+  <circle cx="150" cy="35" r="3" fill="#6b7280"/>
+  
+  <!-- Power indicator -->
+  <circle cx="250" cy="70" r="6" fill="#ef4444">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <text x="250" y="75" font-family="Arial, sans-serif" font-size="6" fill="white" text-anchor="middle">PWR</text>
+  
+  <!-- Data flow indicators -->
+  <g opacity="0.6">
+    <circle cx="120" cy="100" r="2" fill="#3b82f6">
+      <animate attributeName="cy" values="100;80;100" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="180" cy="100" r="2" fill="#3b82f6">
+      <animate attributeName="cy" values="100;80;100" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="150" cy="100" r="2" fill="#3b82f6">
+      <animate attributeName="cy" values="100;80;100" dur="2s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Device label -->
+  <text x="150" y="220" font-family="Arial, sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle" font-weight="bold">Smart Controller</text>
+  <text x="150" y="235" font-family="Arial, sans-serif" font-size="8" fill="#6b7280" text-anchor="middle">v2.1</text>
+</svg>

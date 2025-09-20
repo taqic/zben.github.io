@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Applications | ZBENS</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .app-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="index.html" class="text-xl font-bold text-indigo-600">ZBENS</a>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="index.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
+                        <a href="mobile-apps.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Mobile Apps</a>
+                        <a href="#" class="border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">PC Apps</a>
+                        <a href="electronics.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Electronics</a>
+                        <a href="index.html#contact" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                    <a href="mailto:matt@zbens.com" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-all">Contact Us</a>
+                </div>
+                <div class="-mr-2 flex items-center sm:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="sm:hidden hidden" id="mobile-menu">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="index.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Home</a>
+                <a href="mobile-apps.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Mobile Apps</a>
+                <a href="#" class="bg-indigo-50 border-indigo-500 text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">PC Apps</a>
+                <a href="electronics.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Electronics</a>
+                <a href="index.html#contact" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Contact</a>
+                <a href="mailto:matt@zbens.com" class="block pl-3 pr-4 py-2 text-base font-medium text-gray-500 hover:text-gray-700 hover:bg-gray-50">Email Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="pt-24 pb-20 bg-gradient-to-r from-indigo-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl" data-aos="fade-up">
+                    <span class="block">Our PC</span>
+                    <span class="block text-indigo-600">Applications</span>
+                </h1>
+                <p class="mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl" data-aos="fade-up" data-aos-delay="100">
+                    Powerful desktop applications built for productivity and specialized tasks.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Apps Section -->
+    <div class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <!-- App 1 -->
+                <div class="app-card bg-white rounded-lg shadow-md overflow-hidden transition-all" data-aos="fade-up">
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-indigo-500 rounded-md p-3">
+                                <i data-feather="monitor" class="text-white h-6 w-6"></i>
+                            </div>
+                            <div class="ml-5">
+                                <h3 class="text-lg leading-6 font-medium text-gray-900">Productivity Suite</h3>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <img class="w-full h-48 object-cover rounded-md" src="images/pc-app-preview.svg" alt="Productivity Suite application">
+                        </div>
+                        <div class="mt-4">
+                            <p class="text-gray-500">
+                                Comprehensive productivity suite with document editing, project management, and collaboration tools.
+                            </p>
+                        </div>
+                        <div class="mt-6 flex justify-between items-center">
+                            <span class="text-sm text-gray-400">Windows • macOS • Linux</span>
+                            <div class="flex space-x-2">
+                                <a href="#" class="text-gray-400 hover:text-gray-500">
+                                    <i data-feather="download" class="h-5 w-5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- App 2 -->
+                <div class="app-card bg-white rounded-lg shadow-md overflow-hidden transition-all" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-indigo-500 rounded-md p-3">
+                                <i data-feather="cpu" class="text-white h-6 w-6"></i>
+                            </div>
+                            <div class="ml-5">
+                                <h3 class="text-lg leading-6 font-medium text-gray-900">System Monitor</h3>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <img class="w-full h-48 object-cover rounded-md" src="images/electronics-device.svg" alt="System Monitor application">
+                        </div>
+                        <div class="mt-4">
+                            <p class="text-gray-500">
+                                Advanced system monitoring tool with real-time performance metrics and hardware diagnostics.
+                            </p>
+                        </div>
+                        <div class="mt-6 flex justify-between items-center">
+                            <span class="text-sm text-gray-400">Windows • macOS</span>
+                            <div class="flex space-x-2">
+                                <a href="#" class="text-gray-400 hover:text-gray-500">
+                                    <i data-feather="download" class="h-5 w-5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- App 3 -->
+                <div class="app-card bg-white rounded-lg shadow-md overflow-hidden transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-indigo-500 rounded-md p-3">
+                                <i data-feather="database" class="text-white h-6 w-6"></i>
+                            </div>
+                            <div class="ml-5">
+                                <h3 class="text-lg leading-6 font-medium text-gray-900">Data Manager</h3>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <img class="w-full h-48 object-cover rounded-md" src="images/iot-network.svg" alt="Data Manager application">
+                        </div>
+                        <div class="mt-4">
+                            <p class="text-gray-500">
+                                Professional data management and analysis tool with support for multiple database formats.
+                            </p>
+                        </div>
+                        <div class="mt-6 flex justify-between items-center">
+                            <span class="text-sm text-gray-400">Windows • Linux</span>
+                            <div class="flex space-x-2">
+                                <a href="#" class="text-gray-400 hover:text-gray-500">
+                                    <i data-feather="download" class="h-5 w-5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center mb-12">
+                <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Features</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Why Choose Our PC Applications
+                </p>
+            </div>
+            <div class="mt-10">
+                <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10">
+                    <div class="relative" data-aos="fade-up">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                            <i data-feather="zap" class="h-6 w-6"></i>
+                        </div>
+                        <p class="mt-5 text-lg leading-6 font-medium text-gray-900">High Performance</p>
+                        <p class="mt-2 text-base text-gray-500">
+                            Optimized for speed and efficiency, our applications deliver exceptional performance on all supported platforms.
+                        </p>
+                    </div>
+                    <div class="relative" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                            <i data-feather="shield" class="h-6 w-6"></i>
+                        </div>
+                        <p class="mt-5 text-lg leading-6 font-medium text-gray-900">Secure & Reliable</p>
+                        <p class="mt-2 text-base text-gray-500">
+                            Built with security in mind, featuring encrypted data storage and secure communication protocols.
+                        </p>
+                    </div>
+                    <div class="relative" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                            <i data-feather="refresh-cw" class="h-6 w-6"></i>
+                        </div>
+                        <p class="mt-5 text-lg leading-6 font-medium text-gray-900">Regular Updates</p>
+                        <p class="mt-2 text-base text-gray-500">
+                            Continuous improvements and new features added based on user feedback and technological advances.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="bg-indigo-700">
+        <div class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-white sm:text-4xl" data-aos="fade-up">
+                <span class="block">Ready to try our applications?</span>
+                <span class="block">Download them today.</span>
+            </h2>
+            <p class="mt-4 text-lg leading-6 text-indigo-200" data-aos="fade-up" data-aos-delay="100">
+                Available for Windows, macOS, and Linux with free trials for all our applications.
+            </p>
+            <a href="index.html#contact" class="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 sm:w-auto transition-all" data-aos="fade-up" data-aos-delay="200">
+                Contact us for details
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Products</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="mobile-apps.html" class="text-base text-gray-300 hover:text-white">Mobile Apps</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">PC Applications</a></li>
+                        <li><a href="electronics.html" class="text-base text-gray-300 hover:text-white">Electronics</a></li>
+                        <li><a href="iot.html" class="text-base text-gray-300 hover:text-white">IoT Solutions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Company</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="index.html#about" class="text-base text-gray-300 hover:text-white">About</a></li>
+                        <li><a href="index.html#contact" class="text-base text-gray-300 hover:text-white">Contact</a></li>
+                        <li><a href="careers.html" class="text-base text-gray-300 hover:text-white">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Legal</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="privacy.html" class="text-base text-gray-300 hover:text-white">Privacy</a></li>
+                        <li><a href="terms.html" class="text-base text-gray-300 hover:text-white">Terms</a></li>
+                        <li><a href="cookies.html" class="text-base text-gray-300 hover:text-white">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Connect</h3>
+                    <div class="mt-4 flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="twitter" class="h-6 w-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="facebook" class="h-6 w-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="github" class="h-6 w-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="linkedin" class="h-6 w-6"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
+                <div class="flex space-x-6 md:order-2">
+                    <a href="privacy-app1.html" class="text-sm text-gray-400 hover:text-white">Smart Noise Monitor Privacy</a>
+                    <a href="privacy-app2.html" class="text-sm text-gray-400 hover:text-white">App 2 Privacy</a>
+                    <a href="privacy-app3.html" class="text-sm text-gray-400 hover:text-white">App 3 Privacy</a>
+                </div>
+                <p class="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
+                    &copy; 2023 ZBENS. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                feather.replace();
+            } else {
+                menu.classList.add('hidden');
+            }
+        });
+
+        // Initialize animations
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Replace icons
+        feather.replace();
+    </script>
+</body>
+</html>

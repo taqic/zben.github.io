@@ -1,0 +1,112 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cloudGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dbeafe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#bfdbfe;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="deviceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f8fafc"/>
+  
+  <!-- Cloud -->
+  <ellipse cx="200" cy="80" rx="60" ry="30" fill="url(#cloudGradient)"/>
+  <ellipse cx="180" cy="70" rx="40" ry="25" fill="url(#cloudGradient)"/>
+  <ellipse cx="220" cy="70" rx="40" ry="25" fill="url(#cloudGradient)"/>
+  <ellipse cx="200" cy="60" rx="30" ry="20" fill="url(#cloudGradient)"/>
+  
+  <!-- Cloud icon -->
+  <g transform="translate(200, 80)">
+    <path d="M -15 -5 Q -20 -10 -15 -15 Q -10 -20 -5 -15 Q 0 -20 5 -15 Q 10 -20 15 -15 Q 20 -10 15 -5 Q 20 0 15 5 Q 10 10 5 5 Q 0 10 -5 5 Q -10 10 -15 5 Q -20 0 -15 -5 Z" fill="white"/>
+  </g>
+  
+  <!-- IoT Devices -->
+  <!-- Smart Home Hub -->
+  <rect x="50" y="150" width="40" height="30" fill="url(#deviceGradient)" rx="4"/>
+  <rect x="55" y="155" width="30" height="20" fill="none" stroke="white" stroke-width="1" rx="2"/>
+  <circle cx="70" cy="165" r="2" fill="#10b981">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="70" y="195" font-family="Arial, sans-serif" font-size="8" fill="#374151" text-anchor="middle">Hub</text>
+  
+  <!-- Temperature Sensor -->
+  <circle cx="150" cy="165" r="15" fill="url(#deviceGradient)"/>
+  <circle cx="150" cy="165" r="10" fill="none" stroke="white" stroke-width="2"/>
+  <line x1="150" y1="155" x2="150" y2="175" stroke="white" stroke-width="2"/>
+  <line x1="145" y1="165" x2="155" y2="165" stroke="white" stroke-width="2"/>
+  <text x="150" y="195" font-family="Arial, sans-serif" font-size="8" fill="#374151" text-anchor="middle">Temp</text>
+  
+  <!-- Motion Sensor -->
+  <rect x="250" y="150" width="30" height="30" fill="url(#deviceGradient)" rx="15"/>
+  <circle cx="265" cy="165" r="8" fill="white"/>
+  <circle cx="265" cy="165" r="4" fill="#ef4444">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <text x="265" y="195" font-family="Arial, sans-serif" font-size="8" fill="#374151" text-anchor="middle">Motion</text>
+  
+  <!-- Smart Light -->
+  <circle cx="350" cy="165" r="15" fill="url(#deviceGradient)"/>
+  <circle cx="350" cy="165" r="10" fill="#fbbf24" opacity="0.8">
+    <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <text x="350" y="195" font-family="Arial, sans-serif" font-size="8" fill="#374151" text-anchor="middle">Light</text>
+  
+  <!-- Connection lines -->
+  <g stroke="#3b82f6" stroke-width="2" opacity="0.6">
+    <line x1="200" y1="110" x2="70" y2="150">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+    </line>
+    <line x1="200" y1="110" x2="150" y2="150">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+    </line>
+    <line x1="200" y1="110" x2="265" y2="150">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="1s" repeatCount="indefinite"/>
+    </line>
+    <line x1="200" y1="110" x2="350" y2="150">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+    </line>
+  </g>
+  
+  <!-- Data packets -->
+  <g opacity="0.8">
+    <rect x="120" y="120" width="8" height="4" fill="#10b981" rx="1">
+      <animate attributeName="x" values="120;70" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="140" y="125" width="8" height="4" fill="#3b82f6" rx="1">
+      <animate attributeName="x" values="140;150" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="160" y="130" width="8" height="4" fill="#f59e0b" rx="1">
+      <animate attributeName="x" values="160;265" dur="2s" begin="1s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="180" y="135" width="8" height="4" fill="#ef4444" rx="1">
+      <animate attributeName="x" values="180;350" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  
+  <!-- Network status indicators -->
+  <circle cx="320" cy="50" r="4" fill="#10b981">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" repeatCount="indefinite"/>
+  </circle>
+  <text x="330" y="55" font-family="Arial, sans-serif" font-size="8" fill="#374151">Connected</text>
+  
+  <!-- Data flow visualization -->
+  <g opacity="0.4">
+    <circle cx="100" cy="200" r="2" fill="#3b82f6">
+      <animate attributeName="r" values="2;4;2" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="200" r="2" fill="#3b82f6">
+      <animate attributeName="r" values="2;4;2" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="200" r="2" fill="#3b82f6">
+      <animate attributeName="r" values="2;4;2" dur="2s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Title -->
+  <text x="200" y="250" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="middle" font-weight="bold">IoT Network</text>
+  <text x="200" y="270" font-family="Arial, sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Connected Devices</text>
+</svg>
