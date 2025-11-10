@@ -1,153 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App 3 Privacy Policy | ZBENS</title>
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kitchen Sync — Privacy Policy</title>
+    <meta name="description" content="Privacy Policy for Kitchen Sync mobile application." />
     <style>
-        .policy-container {
-            max-width: 800px;
-        }
-        .policy-section {
-            margin-bottom: 2.5rem;
-        }
+      :root {
+        --bg: #0e1116;
+        --fg: #e6edf3;
+        --muted: #9aa4af;
+        --primary: #17cf17;
+        --card: #161b22;
+        --border: #2d333b;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      }
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 40px 20px 80px;
+      }
+      h1, h2, h3 { line-height: 1.25; }
+      h1 { font-size: 2rem; margin: 0 0 12px; }
+      .app {
+        color: var(--primary);
+        font-weight: 700;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        margin: 16px 0;
+      }
+      .muted { color: var(--muted); }
+      ul { margin: 8px 0 0 1.2rem; }
+      a { color: var(--primary); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      .lang { margin-top: 32px; opacity: 0.9; }
+      hr { border: 0; border-top: 1px solid var(--border); margin: 28px 0; }
+      code { background: #0b0f14; padding: 2px 6px; border-radius: 6px; border: 1px solid var(--border); }
     </style>
-</head>
-<body class="font-sans antialiased text-gray-800 bg-gray-50">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex">
-                    <div class="flex-shrink-0 flex items-center">
-                        <a href="index.html" class="text-xl font-bold text-indigo-600">ZBENS</a>
-                    </div>
-                </div>
-                <div class="hidden sm:ml-6 sm:flex sm:items-center">
-                    <a href="index.html" class="text-gray-500 hover:text-gray-700 px-3 py-2 text-sm font-medium">Back to Home</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Privacy Policy — <span class="app">Kitchen Sync</span></h1>
+      <p class="muted">Last updated: <strong><!-- yyyy-mm-dd -->2025-11-10</strong></p>
 
-    <!-- Policy Content -->
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="policy-container mx-auto bg-white p-8 rounded-lg shadow-md">
-                <h1 class="text-3xl font-bold text-gray-900 mb-6">Privacy Policy for App 3</h1>
-                <p class="text-gray-600 mb-8">Last updated: January 1, 2023</p>
+      <div class="card">
+        <h2>Overview</h2>
+        <p>
+          <span class="app">Kitchen Sync</span> is a recipe management app focused on privacy.
+          The app follows a local‑first design: your recipes, notes, plans and images are stored
+          on your device by default. We do not operate any backend that receives, tracks,
+          or sells your personal data.
+        </p>
+      </div>
 
-                <div class="policy-section">
-                    <h2 class="text-xl font-semibold text-gray-900 mb-4">1. Information We Collect</h2>
-                    <p class="text-gray-600 mb-4">
-                        App 3 collects the following types of information:
-                    </p>
-                    <ul class="list-disc pl-5 text-gray-600 space-y-2">
-                        <li><strong>Account Information:</strong> When you create an account, we collect your name, email address, and other registration details.</li>
-                        <li><strong>Content:</strong> We collect the content you create, upload, or receive from others when using our services.</li>
-                        <li><strong>Usage Information:</strong> We collect information about how you interact with our services, including the features you use and the time spent.</li>
-                        <li><strong>Device Information:</strong> We collect device-specific information such as operating system version and unique device identifiers.</li>
-                    </ul>
-                </div>
+      <div class="card">
+        <h2>Data We Collect</h2>
+        <p><strong>We do not collect, share or sell personal data to our servers.</strong></p>
+        <p>The app may process the following data locally on your device to provide core features:</p>
+        <ul>
+          <li>Recipes, tags, collections, meal plans, shopping lists and pantry inventory (stored locally using SQLite/Hive).</li>
+          <li>Imported content from web links or images. OCR text recognition is performed on device using Google ML Kit.</li>
+          <li>Basic settings (theme, unit preferences, language).</li>
+        </ul>
+      </div>
 
-                <div class="policy-section">
-                    <h2 class="text-xl font-semibold text-gray-900 mb-4">2. How We Use Information</h2>
-                    <p class="text-gray-600 mb-4">
-                        We use the information we collect to:
-                    </p>
-                    <ul class="list-disc pl-5 text-gray-600 space-y-2">
-                        <li>Provide, maintain, and improve our services</li>
-                        <li>Develop new features and functionality</li>
-                        <li>Provide customer support</li>
-                        <li>Send you technical notices, updates, and security alerts</li>
-                        <li>Monitor and analyze trends, usage, and activities in connection with our services</li>
-                    </ul>
-                </div>
+      <div class="card">
+        <h2>Permissions</h2>
+        <ul>
+          <li><strong>Camera / Photos</strong>: to import recipes from images and scan text (OCR). Images are kept locally unless you export or share.</li>
+          <li><strong>Storage</strong>: to read/write recipe data and cached images locally.</li>
+          <li><strong>Notifications</strong> (optional): for timers or reminders you enable.</li>
+        </ul>
+        <p>No permission is used for purposes other than providing the corresponding feature.</p>
+      </div>
 
-                <div class="policy-section">
-                    <h2 class="text-xl font-semibold text-gray-900 mb-4">3. Information Sharing</h2>
-                    <p class="text-gray-600 mb-4">
-                        We may share your information in the following circumstances:
-                    </p>
-                    <ul class="list-disc pl-5 text-gray-600 space-y-2">
-                        <li><strong>With Your Consent:</strong> We will share personal information with third parties when we have your consent to do so.</li>
-                        <li><strong>For Legal Reasons:</strong> We may disclose information if we believe it's necessary to comply with a legal obligation.</li>
-                        <li><strong>Service Providers:</strong> We may engage third-party companies to perform services on our behalf.</li>
-                    </ul>
-                </div>
+      <div class="card">
+        <h2>Data Sharing</h2>
+        <p>We do not share your data with third parties. When you choose to export or share a recipe, the content you select will be shared via the target app or channel you choose.</p>
+      </div>
 
-                <div class="policy-section">
-                    <h2 class="text-xl font-semibold text-gray-900 mb-4">4. Data Retention</h2>
-                    <p class="text-gray-600">
-                        We retain your personal information only for as long as necessary to provide you with our services and as described in this Privacy Policy. However, we may also be required to retain this information to comply with legal and regulatory obligations, to resolve disputes, and to enforce our agreements.
-                    </p>
-                </div>
+      <div class="card">
+        <h2>Data Retention &amp; Deletion</h2>
+        <p>All user data is stored on your device and remains until you delete it in the app or uninstall the app. Uninstalling the app removes the locally stored data.</p>
+      </div>
 
-                <div class="policy-section">
-                    <h2 class="text-xl font-semibold text-gray-900 mb-4">5. Your Rights</h2>
-                    <p class="text-gray-600 mb-4">
-                        Depending on your location, you may have certain rights regarding your personal information, including:
-                    </p>
-                    <ul class="list-disc pl-5 text-gray-600 space-y-2">
-                        <li>The right to access and receive a copy of your personal information</li>
-                        <li>The right to request correction of inaccurate personal information</li>
-                        <li>The right to request deletion of your personal information</li>
-                        <li>The right to object to or restrict certain processing activities</li>
-                    </ul>
-                    <p class="text-gray-600 mt-4">
-                        To exercise these rights, please contact us at <a href="mailto:matt@zbens.com" class="text-indigo-600 hover:text-indigo-500">matt@zbens.com</a>.
-                    </p>
-                </div>
+      <div class="card">
+        <h2>Children’s Privacy</h2>
+        <p>The app is not directed to children under 13. We do not knowingly collect personal information from children.</p>
+      </div>
 
-                <div class="policy-section">
-                    <h2 class="text-xl font-semibold text-gray-900 mb-4">6. International Data Transfers</h2>
-                    <p class="text-gray-600">
-                        We may transfer your personal information to countries other than your own. When we do, we ensure that appropriate safeguards are in place to protect your information in accordance with applicable data protection laws.
-                    </p>
-                </div>
+      <div class="card">
+        <h2>Security</h2>
+        <p>We use platform‑provided storage and follow best practices to minimize data exposure. Because we do not run cloud servers for this app, there is no remote profile of your data.</p>
+      </div>
 
-                <div class="policy-section">
-                    <h2 class="text-xl font-semibold text-gray-900 mb-4">7. Changes to This Policy</h2>
-                    <p class="text-gray-600">
-                        We may update this Privacy Policy from time to time. The updated version will be indicated by an updated "Last updated" date and the updated version will be effective as soon as it is accessible. We encourage you to review this Privacy Policy frequently to be informed of how we are protecting your information.
-                    </p>
-                </div>
+      <div class="card">
+        <h2>Changes to This Policy</h2>
+        <p>We may update this policy from time to time. Material changes will be reflected on this page with an updated “Last updated” date.</p>
+      </div>
 
-                <div class="policy-section">
-                    <h2 class="text-xl font-semibold text-gray-900 mb-4">8. Contact Us</h2>
-                    <p class="text-gray-600">
-                        If you have any questions about this Privacy Policy, please contact us at <a href="mailto:matt@zbens.com" class="text-indigo-600 hover:text-indigo-500">matt@zbens.com</a>.
-                    </p>
-                </div>
-            </div>
-        </div>
+      <div class="card">
+        <h2>Contact</h2>
+        <p>If you have any questions or requests (e.g., export assistance), contact: <a href="mailto:support@kitchensync.app">support@kitchensync.app</a></p>
+      </div>
+
+      <div class="lang">
+        <hr />
+        <h2>隐私政策（简体中文）</h2>
+        <p><strong>概述：</strong><span class="app">Kitchen Sync</span> 采用本地优先设计，食谱、批注、计划与图片默认保存在您的设备本地。我们不运营接收或出售个人数据的服务器。</p>
+        <p><strong>收集与使用：</strong>应用不会向我们服务器上传您的个人数据。为提供核心功能，应用会在本地处理并保存食谱数据、从网页/图片导入的内容（OCR 在设备上完成）、以及偏好设置。</p>
+        <p><strong>权限用途：</strong>相机/照片用于图片导入与 OCR；存储用于本地保存数据；通知仅在您启用计时/提醒时使用。权限仅用于对应功能。</p>
+        <p><strong>共享与保留：</strong>我们不与第三方共享数据。仅当您主动导出或分享时，选中的内容才会通过您选择的渠道分享。卸载应用会删除本地数据。</p>
+        <p><strong>儿童隐私：</strong>本应用并非面向 13 岁以下儿童。</p>
+        <p><strong>安全：</strong>使用平台存储并遵循最小化数据暴露原则。由于没有云端账户，您的数据不会被我们集中存储。</p>
+        <p><strong>联系我们：</strong><a href="mailto:support@kitchensync.app">support@kitchensync.app</a></p>
+      </div>
     </div>
+  </body>
+  </html>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <span class="text-xl font-bold text-indigo-400">ZBENS</span>
-                </div>
-                <div class="flex space-x-6">
-                    <a href="privacy.html" class="text-gray-300 hover:text-white">Privacy Policy</a>
-                    <a href="terms.html" class="text-gray-300 hover:text-white">Terms of Service</a>
-                    <a href="index.html#contact" class="text-gray-300 hover:text-white">Contact</a>
-                </div>
-            </div>
-            <div class="mt-8 text-center text-gray-400 text-sm">
-                &copy; 2023 ZBENS. All rights reserved.
-            </div>
-        </div>
-    </footer>
 
-    <script>
-        feather.replace();
-    </script>
-</body>
-</html>
