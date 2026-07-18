@@ -1,0 +1,31 @@
+{
+  "updated_at": "2026-07-18",
+  "note": "Prefer GitHub Releases for app builds; use R2 when files are large or egress-sensitive.",
+  "items": [
+    {
+      "id": "hdrecover",
+      "name": "HDRECOVER",
+      "platform": "windows",
+      "channel": "github_releases",
+      "url": "",
+      "r2_key": "",
+      "status": "coming_soon"
+    },
+    {
+      "id": "smart-noise-monitor",
+      "name": "Smart Noise Monitor",
+      "platform": "ios",
+      "channel": "app_store",
+      "url": "",
+      "status": "listed"
+    },
+    {
+      "id": "skincare-cycle",
+      "name": "Skincare Cycle",
+      "platform": "ios",
+      "channel": "app_store",
+      "url": "",
+      "status": "listed"
+    }
+  ]
+}
