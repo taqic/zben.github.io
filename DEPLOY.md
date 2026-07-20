@@ -22,8 +22,10 @@ npx wrangler d1 create zbens-feedback
 npx wrangler d1 execute zbens-feedback --file=./migrations/0001_feedback.sql --remote
 ```
 
-把输出的 `database_id` 写入 `wrangler.toml`。  
-Pages 项目 → **Settings** → **Functions** → **D1 bindings**：binding 名 `DB`，选 `zbens-feedback`。
+把真实 `database_id` 写入 `wrangler.toml`（**禁止**留下 `REPLACE_WITH_...` 占位符，否则 Pages 部署会报 Error 8000022 并整次失败）。  
+也可只在 Pages → **Settings** → **Functions** → **D1 bindings** 里绑定 `DB`，`wrangler.toml` 中保持 D1 段注释。
+
+> 2026-07-20：曾因占位 UUID 导致 Functions 发布失败，静态退款页未能上线。
 
 ## 3. Turnstile
 
