@@ -2,14 +2,7 @@ name = "zbens"
 compatibility_date = "2026-07-18"
 pages_build_output_dir = "."
 
-# D1：先在 Dashboard → Pages → Settings → Functions 绑定 DB，
-# 或创建库后取消下面注释并填入真实 database_id（勿留占位符，否则部署失败）
-# [[d1_databases]]
-# binding = "DB"
-# database_name = "zbens-feedback"
-# database_id = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-
-# 可选 R2
-# [[r2_buckets]]
-# binding = "DOWNLOADS"
-# bucket_name = "zbens-downloads"
+[[d1_databases]]
+binding = "DB"
+database_name = "zbens-feedback"
+database_id = "b8e9139a-ee39-40bc-b05e-710d6482a53d"

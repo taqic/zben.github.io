@@ -1,10 +1,10 @@
-# Push Cloudflare Pages secrets from .dev.vars without echoing values.
+﻿# Push Cloudflare Pages secrets from .dev.vars without echoing values.
 # Usage: powershell -File scripts/push-secrets.ps1
 $ErrorActionPreference = "Stop"
 $root = Split-Path -Parent $PSScriptRoot
 $varsFile = Join-Path $root ".dev.vars"
 if (-not (Test-Path $varsFile)) {
-  Write-Host "Missing .dev.vars — copy secrets/smtp.local.env.example first."
+  Write-Host "Missing .dev.vars 鈥?copy secrets/smtp.local.env.example first."
   exit 1
 }
 $map = @{}
@@ -27,6 +27,7 @@ foreach ($k in $keys) {
     continue
   }
   Write-Host "putting $k ..."
-  $map[$k] | npx --yes wrangler pages secret put $k --project-name=zbens
+  $map[$k] | npx --yes wrangler pages secret put $k --project-name=zben-github-io
 }
 Write-Host "done (values not printed)."
+
