@@ -9,6 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
 </head>
 <body class="font-sans antialiased text-gray-800 bg-gray-50">
     <nav class="bg-white shadow-sm">
@@ -63,10 +64,9 @@
                         <li class="flex"><i data-feather="check" class="h-5 w-5 text-green-500 mr-2"></i> Email help for license activation &amp; product docs</li>
                         <li class="flex"><i data-feather="check" class="h-5 w-5 text-green-500 mr-2"></i> Commercial use license</li>
                     </ul>
-                    <!-- Replace href with Paddle Checkout URL when ready -->
-                    <a href="mailto:matt@zbens.com?subject=HDRECOVER%20Pro%20Purchase" class="mt-8 inline-flex w-full justify-center px-4 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md font-medium">Buy Pro</a>
+                    <button type="button" id="buy-pro" class="mt-8 inline-flex w-full justify-center px-4 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md font-medium">Buy Pro</button>
                     <p class="mt-4 text-xs text-gray-500">
-                        Checkout will be processed by Paddle. By purchasing you agree to our
+                        Checkout is processed securely by Paddle. By purchasing you agree to our
                         <a href="terms.html" class="text-indigo-600 hover:underline">Terms</a>,
                         <a href="privacy.html" class="text-indigo-600 hover:underline">Privacy Policy</a>, and
                         <a href="refunds.html" class="text-indigo-600 hover:underline">Refund Policy</a>.
@@ -98,7 +98,23 @@
             <div class="mt-8 text-center text-gray-400 text-sm">&copy; 2026 ZBENS. All rights reserved.</div>
         </div>
     </footer>
-    <script>feather.replace();</script>
+    <script>
+      feather.replace();
+      Paddle.Initialize({
+        token: "live_c63341e642e044af7bfe2cb5e7a",
+        eventCallback: function (data) {
+          if (data && data.name) {
+            console.log("[Paddle]", data.name, data);
+          }
+        }
+      });
+
+      document.getElementById("buy-pro").addEventListener("click", function () {
+        Paddle.Checkout.open({
+          items: [{ priceId: "pri_01ky3qmdfwc7wze4k4752pdmtb", quantity: 1 }]
+        });
+      });
+    </script>
     <script src="/js/i18n.js"></script>
     <script src="/js/site-chrome.js"></script>
 </body>
