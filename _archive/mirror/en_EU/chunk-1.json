@@ -1,0 +1,23 @@
+[
+  {
+    "barcode": "3600523561234",
+    "name": "Vichy Mineral 89",
+    "brand": "Vichy",
+    "category": "Serum",
+    "ingredients": "Hyaluronic Acid; Mineralizing Water"
+  },
+  {
+    "barcode": "3337872411991",
+    "name": "La Roche-Posay Toleriane Cleanser",
+    "brand": "La Roche-Posay",
+    "category": "Cleanser",
+    "ingredients": "Glycerin; Niacinamide"
+  },
+  {
+    "barcode": "3041560000000",
+    "name": "Clarins Double Serum",
+    "brand": "Clarins",
+    "category": "Serum",
+    "ingredients": "Turmeric; Glycerin"
+  }
+]
