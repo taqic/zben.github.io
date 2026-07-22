@@ -6,7 +6,7 @@
     if (!container) return;
     const exists = Array.from(container.querySelectorAll("a")).some((a) => {
       const h = (a.getAttribute("href") || "").replace(/^\.\//, "");
-      return h === href || h.endsWith("/" + href);
+      return h === href || h === href.replace(/^\//, "") || h.endsWith(href);
     });
     if (exists) return;
     const a = document.createElement("a");
@@ -24,9 +24,9 @@
       document.querySelector("nav .flex.items-center");
 
     if (left) {
-      ensureLink(left, "pricing.html", "Pricing", "nav.pricing");
-      ensureLink(left, "download.html", "Download", "nav.download");
-      ensureLink(left, "hdrecover.html", "HDRECOVER", "nav.hdrecover");
+      ensureLink(left, "/pricing.html", "Pricing", "nav.pricing");
+      ensureLink(left, "/download.html", "Download", "nav.download");
+      ensureLink(left, "/hdrecover.html", "HDRECOVER", "nav.hdrecover");
     }
 
     const host =
