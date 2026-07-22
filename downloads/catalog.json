@@ -1,15 +1,18 @@
 {
-  "updated_at": "2026-07-18",
+  "updated_at": "2026-07-22",
   "note": "Prefer GitHub Releases for app builds; use R2 when files are large or egress-sensitive.",
   "items": [
     {
       "id": "hdrecover",
       "name": "HDRECOVER",
+      "version": "0.2.0",
       "platform": "windows",
       "channel": "github_releases",
-      "url": "",
+      "url": "https://github.com/taqic/zben.github.io/releases/download/v0.2.0/HDRECOVER-Setup-0.2.0.exe",
       "r2_key": "",
-      "status": "coming_soon"
+      "status": "available",
+      "filename": "HDRECOVER-Setup-0.2.0.exe",
+      "requires": ".NET 8 Desktop Runtime (x64)"
     },
     {
       "id": "smart-noise-monitor",
