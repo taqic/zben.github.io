@@ -5,13 +5,13 @@
     {
       "id": "hdrecover",
       "name": "HDRECOVER",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "platform": "windows",
       "channel": "github_releases",
-      "url": "https://github.com/taqic/zben.github.io/releases/download/v0.2.0/HDRECOVER-Setup-0.2.0.exe",
+      "url": "https://github.com/taqic/zben.github.io/releases/download/v0.2.1/HDRECOVER-Setup-0.2.1.exe",
       "r2_key": "",
       "status": "available",
-      "filename": "HDRECOVER-Setup-0.2.0.exe",
+      "filename": "HDRECOVER-Setup-0.2.1.exe",
       "requires": ".NET 8 Desktop Runtime (x64)"
     },
     {

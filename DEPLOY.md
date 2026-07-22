@@ -56,4 +56,14 @@ Cloudflare → **Web Analytics** → Add site `zbens.com` → 按提示加一段
 - [ ] `https://zbens.com/` 与旧产品/隐私页均可打开  
 - [ ] `/feedback.html` 提交成功（D1 有行）  
 - [ ] 语言切换中/英  
-- [ ] `/download.html` 能读 catalog  
+- [ ] `/download.html` 能读 catalog
+
+## 8. Paddle 购后发激活码
+
+1. 复制 `secrets/smtp.local.env.example` → 根目录 `.dev.vars`，用 **leaf@zbens.com** 填 SMTP（勿提交、勿发聊天）
+2. D1：`npx wrangler d1 execute zbens-feedback --remote --file=./migrations/0002_licenses.sql`
+3. Cloudflare Pages Secrets：SMTP_*、PADDLE_WEBHOOK_SECRET、PADDLE_API_KEY、LICENSE_HMAC_SECRET  
+   或运行 `powershell -File scripts/push-secrets.ps1`
+4. Paddle → Developer tools → Notifications：  
+   URL `https://zbens.com/api/paddle/webhook`，事件 `transaction.completed`
+5. 测单后检查付款邮箱是否收到激活码（发件人 leaf@zbens.com）

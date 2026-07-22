@@ -1,13 +1,13 @@
-{
-  "name": "zbens-site",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "test": "node --test tests/**/*.test.js",
-    "dev": "wrangler pages dev . --d1=DB=zbens-feedback",
-    "deploy": "wrangler pages deploy ."
-  },
-  "devDependencies": {
-    "wrangler": "^4.20.0"
-  }
+﻿{
+    "name":  "zbens-site",
+    "private":  true,
+    "type":  "module",
+    "scripts":  {
+                    "test":  "node --test tests/**/*.test.js",
+                    "dev":  "wrangler pages dev . --d1=DB=zbens-feedback",
+                    "deploy":  "wrangler pages deploy ."
+                },
+    "devDependencies":  {
+                            "wrangler":  "^4.20.0"
+                        }
 }
