@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HDRECOVER — Lightweight Windows Data Recovery | ZBENS</title>
+    <meta name="description" content="HDRECOVER: lightweight, read-only Windows data recovery. Free full scan and preview; Pro unlocks unlimited recovery. NTFS, FAT32, deleted files, format recovery.">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .feature-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 10px 10px -5px rgba(0,0,0,.04); }
+        .transition-all { transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <nav class="bg-white shadow-sm fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="index.html" class="text-xl font-bold text-indigo-600">ZBENS</a>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="index.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
+                        <a href="pc-apps.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">PC Apps</a>
+                        <a href="hdrecover.html" class="border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">HDRECOVER</a>
+                        <a href="pricing.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Pricing</a>
+                    </div>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                    <a href="mailto:matt@zbens.com" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-all">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="pt-24 pb-16 bg-gradient-to-r from-indigo-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-10 items-center">
+                <div data-aos="fade-right">
+                    <p class="text-sm font-semibold tracking-wide uppercase text-indigo-600 mb-2">ZBENS PC Product</p>
+                    <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900">
+                        <span class="block">HDRECOVER</span>
+                        <span class="block text-indigo-600 text-3xl sm:text-4xl mt-2">Lightweight Windows data recovery</span>
+                    </h1>
+                    <p class="mt-4 text-lg text-gray-500 max-w-xl">
+                        Packaged Windows software for recovering deleted or inaccessible files on storage you own. Free scan and preview on your PC; buy a one-time Pro license only when you need unlimited restore. Not a remote tech-support or consulting service.
+                    </p>
+                    <div class="mt-8 flex flex-wrap gap-3">
+                        <a href="https://github.com/taqic/zben.github.io/releases/download/v0.2.2/HDRECOVER-Setup-0.2.2.exe" class="inline-flex items-center px-6 py-3 rounded-md text-white bg-indigo-600 hover:bg-indigo-700 font-medium transition-all">Download for Windows</a>
+                        <a href="pricing.html" class="inline-flex items-center px-6 py-3 rounded-md text-indigo-700 bg-indigo-50 hover:bg-indigo-100 font-medium transition-all">View pricing</a>
+                        <a href="mailto:matt@zbens.com?subject=HDRECOVER%20Inquiry" class="inline-flex items-center px-6 py-3 rounded-md text-indigo-600 bg-white hover:bg-gray-50 font-medium shadow transition-all">Ask a question</a>
+                    </div>
+                </div>
+                <div class="mt-10 lg:mt-0" data-aos="fade-left">
+                    <img class="w-full h-64 object-cover rounded-lg shadow-xl" src="images/pc-app-preview.svg" alt="HDRECOVER Windows application">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="py-14 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center mb-10">
+                <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Features</h2>
+                <p class="mt-2 text-3xl font-extrabold text-gray-900">Built for real recovery scenarios</p>
+            </div>
+            <div class="grid gap-8 md:grid-cols-3">
+                <div class="feature-card bg-white p-6 rounded-lg shadow-md transition-all" data-aos="fade-up">
+                    <div class="bg-indigo-500 rounded-md p-3 inline-flex"><i data-feather="hard-drive" class="text-white h-6 w-6"></i></div>
+                    <h3 class="mt-4 text-lg font-medium text-gray-900">Structure-aware scan</h3>
+                    <p class="mt-2 text-gray-500">NTFS MFT and FAT32 structure parsing — not just Recycle Bin leftovers.</p>
+                </div>
+                <div class="feature-card bg-white p-6 rounded-lg shadow-md transition-all" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-indigo-500 rounded-md p-3 inline-flex"><i data-feather="eye" class="text-white h-6 w-6"></i></div>
+                    <h3 class="mt-4 text-lg font-medium text-gray-900">Preview before you pay</h3>
+                    <p class="mt-2 text-gray-500">Free edition includes deep scan and unlimited preview so you can confirm files first.</p>
+                </div>
+                <div class="feature-card bg-white p-6 rounded-lg shadow-md transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-indigo-500 rounded-md p-3 inline-flex"><i data-feather="shield" class="text-white h-6 w-6"></i></div>
+                    <h3 class="mt-4 text-lg font-medium text-gray-900">Privacy first</h3>
+                    <p class="mt-2 text-gray-500">Scan and recovery run locally. We do not upload your disk contents for the recovery workflow.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="py-14 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">Free vs Pro</h2>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <table class="min-w-full text-sm">
+                    <thead class="bg-gray-100 text-left text-gray-500">
+                        <tr>
+                            <th class="px-6 py-3 font-medium">Capability</th>
+                            <th class="px-6 py-3 font-medium">Free</th>
+                            <th class="px-6 py-3 font-medium">Pro</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100 text-gray-700">
+                        <tr><td class="px-6 py-3">Quick / deep / partition scan</td><td class="px-6 py-3">Yes</td><td class="px-6 py-3">Yes</td></tr>
+                        <tr><td class="px-6 py-3">File preview</td><td class="px-6 py-3">Unlimited</td><td class="px-6 py-3">Unlimited</td></tr>
+                        <tr><td class="px-6 py-3">Recovery quota</td><td class="px-6 py-3">5 files / &lt;10MB each</td><td class="px-6 py-3">Unlimited</td></tr>
+                        <tr><td class="px-6 py-3">Scan session save</td><td class="px-6 py-3">—</td><td class="px-6 py-3">Yes</td></tr>
+                        <tr><td class="px-6 py-3">License / product email help</td><td class="px-6 py-3">—</td><td class="px-6 py-3">Yes</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="mt-8 text-center">
+                <a href="https://github.com/taqic/zben.github.io/releases/download/v0.2.2/HDRECOVER-Setup-0.2.2.exe" class="inline-flex items-center px-6 py-3 rounded-md text-white bg-indigo-600 hover:bg-indigo-700 font-medium">Download for Windows</a>
+                <a href="pricing.html" class="inline-flex items-center px-6 py-3 rounded-md text-indigo-700 bg-indigo-50 hover:bg-indigo-100 font-medium">Go to pricing</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0"><span class="text-xl font-bold text-indigo-400">ZBENS</span></div>
+                <div class="flex flex-wrap justify-center gap-x-6 gap-y-2">
+                    <a href="pricing.html" class="text-gray-300 hover:text-white">Pricing</a>
+                    <a href="privacy.html" class="text-gray-300 hover:text-white">Privacy Policy</a>
+                    <a href="terms.html" class="text-gray-300 hover:text-white">Terms of Service</a>
+                    <a href="refunds.html" class="text-gray-300 hover:text-white">Refund Policy</a>
+                    <a href="mailto:matt@zbens.com" class="text-gray-300 hover:text-white">Contact</a>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-gray-400 text-sm">&copy; 2026 ZBENS. All rights reserved.</div>
+        </div>
+    </footer>
+    <script>
+        AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+        feather.replace();
+    </script>
+    <script src="/js/i18n.js"></script>
+    <script src="/js/site-chrome.js"></script>
+</body>
+</html>

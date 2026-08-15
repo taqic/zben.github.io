@@ -1,0 +1,23 @@
+[
+  {
+    "barcode": "071249357802",
+    "name": "L'Oreal Revitalift Serum",
+    "brand": "L'Oreal",
+    "category": "Serum",
+    "ingredients": "Vitamin C; Glycerin"
+  },
+  {
+    "barcode": "036000291452",
+    "name": "CeraVe Hydrating Cleanser",
+    "brand": "CeraVe",
+    "category": "Cleanser",
+    "ingredients": "Ceramides; Hyaluronic Acid"
+  },
+  {
+    "barcode": "0730852150022",
+    "name": "Neutrogena Hydro Boost Gel",
+    "brand": "Neutrogena",
+    "category": "Moisturizer",
+    "ingredients": "Hyaluronic Acid; Glycerin"
+  }
+]

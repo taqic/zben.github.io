@@ -1,0 +1,37 @@
+[
+  {
+    "barcode": "6902088410012",
+    "name": "玉兰油多效修护面霜",
+    "brand": "OLAY",
+    "category": "面霜",
+    "ingredients": "Niacinamide; Glycerin; Panthenol"
+  },
+  {
+    "barcode": "6902395721234",
+    "name": "迷奇洁面乳",
+    "brand": "谜奇",
+    "category": "洁面",
+    "ingredients": "Water; Cocamidopropyl Betaine"
+  },
+  {
+    "barcode": "6923450654321",
+    "name": "自然堂冰肌水",
+    "brand": "CHANDO",
+    "category": "爽肤水",
+    "ingredients": "Water; Butylene Glycol; Glycerin"
+  },
+  {
+    "barcode": "6901234567890",
+    "name": "珀莱雅双抗精华",
+    "brand": "PROYA",
+    "category": "精华",
+    "ingredients": "Niacinamide; Tranexamic Acid"
+  },
+  {
+    "barcode": "6938765432109",
+    "name": "佰草集太极眼霜",
+    "brand": "Herborist",
+    "category": "眼霜",
+    "ingredients": "Peptides; Hyaluronic Acid"
+  }
+]

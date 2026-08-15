@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloads | ZBENS</title>
+    <meta name="description" content="Download ZBENS apps from GitHub Releases or Cloudflare R2.">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-slate-50">
+    <nav class="bg-white shadow-sm fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center gap-8">
+                    <a href="index.html" class="text-xl font-bold text-indigo-600">ZBENS</a>
+                    <a href="index.html" class="text-sm text-gray-500 hover:text-gray-800" data-i18n="nav.home">Home</a>
+                    <a href="pc-apps.html" class="text-sm text-gray-500 hover:text-gray-800" data-i18n="nav.pc">PC Apps</a>
+                    <a href="feedback.html" class="text-sm text-gray-500 hover:text-gray-800" data-i18n="nav.feedback">Feedback</a>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                    <a href="mailto:matt@zbens.com" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md text-sm font-medium">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-3xl mx-auto px-4 pt-28 pb-16">
+        <h1 class="text-3xl font-extrabold text-gray-900" data-i18n="download.title">Downloads</h1>
+        <p class="mt-3 text-gray-600" data-i18n="download.lead">Installers are served from GitHub Releases or Cloudflare R2 depending on size.</p>
+        <ul id="download-list" class="mt-8 space-y-4"></ul>
+        <p id="download-empty" class="mt-8 text-gray-500 hidden" data-i18n="download.empty">No packages listed yet. Check the product page or contact us.</p>
+    </main>
+
+    <script src="/js/i18n.js"></script>
+    <script src="/js/site-chrome.js"></script>
+    <script>
+      (async function () {
+        const list = document.getElementById('download-list');
+        const empty = document.getElementById('download-empty');
+        try {
+          const res = await fetch('/downloads/catalog.json', { cache: 'no-cache' });
+          const data = await res.json();
+          const items = (data.items || []).filter((i) => i.url);
+          if (!items.length) {
+            empty.classList.remove('hidden');
+            return;
+          }
+          items.forEach((item) => {
+            const li = document.createElement('li');
+            li.className = 'bg-white border border-gray-100 rounded-lg p-4 shadow-sm flex justify-between items-center gap-4';
+            li.innerHTML = '<div><p class="font-medium text-gray-900"></p><p class="text-sm text-gray-500"></p></div><a class="text-indigo-600 font-medium text-sm whitespace-nowrap" target="_blank" rel="noopener">Download</a>';
+            li.querySelector('p.font-medium').textContent = item.name;
+            li.querySelector('p.text-sm').textContent = [item.platform, item.channel, item.status].filter(Boolean).join(' · ');
+            li.querySelector('a').href = item.url;
+            list.appendChild(li);
+          });
+        } catch (e) {
+          empty.classList.remove('hidden');
+        }
+      })();
+    </script>
+</body>
+</html>

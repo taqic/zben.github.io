@@ -1,0 +1,34 @@
+{
+  "updated_at": "2026-07-22",
+  "note": "Prefer GitHub Releases for app builds; use R2 when files are large or egress-sensitive.",
+  "items": [
+    {
+      "id": "hdrecover",
+      "name": "HDRECOVER",
+      "version": "0.2.2",
+      "platform": "windows",
+      "channel": "github_releases",
+      "url": "https://github.com/taqic/zben.github.io/releases/download/v0.2.2/HDRECOVER-Setup-0.2.2.exe",
+      "r2_key": "",
+      "status": "available",
+      "filename": "HDRECOVER-Setup-0.2.2.exe",
+      "requires": ".NET 8 Desktop Runtime (x64)"
+    },
+    {
+      "id": "smart-noise-monitor",
+      "name": "Smart Noise Monitor",
+      "platform": "ios",
+      "channel": "app_store",
+      "url": "",
+      "status": "listed"
+    },
+    {
+      "id": "skincare-cycle",
+      "name": "Skincare Cycle",
+      "platform": "ios",
+      "channel": "app_store",
+      "url": "",
+      "status": "listed"
+    }
+  ]
+}

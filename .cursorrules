@@ -1,0 +1,26 @@
+# ZBENS 项目规则（.cursorrules 模板）
+
+> 由维护者按需填写/调整。AI 仅维护模板结构。
+
+## 产品
+
+- 品牌：ZBENS / zbens.com
+- 定位：个人独立开发者，消费级软件与 App
+- 联系：matt@zbens.com（网易企业邮）
+
+## 硬约束
+
+1. 禁止删除已上线的产品页、隐私政策等公开 URL（可改内容）
+2. 禁止付费 API / 收费库；优先 MIT、Apache-2.0
+3. 基础设施优先 Cloudflare 免费层
+4. 回复与文档默认中文；站点 UI 需支持中英
+
+## 架构偏好
+
+- 静态 HTML + Pages Functions，避免过早 SPA 化
+- 下载：小文件 GitHub Releases；大文件 / 高流量 R2
+- 反馈：D1 存储；不依赖付费发信
+
+## 当前阶段
+
+见 `CONTEXT.md` / `development_plan.md`

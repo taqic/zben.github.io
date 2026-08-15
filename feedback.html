@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback | ZBENS</title>
+    <meta name="description" content="Send product feedback to ZBENS. Improve apps with your reports.">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-slate-50">
+    <nav class="bg-white shadow-sm fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center gap-8">
+                    <a href="index.html" class="text-xl font-bold text-indigo-600">ZBENS</a>
+                    <a href="index.html" class="text-sm text-gray-500 hover:text-gray-800" data-i18n="nav.home">Home</a>
+                    <a href="mobile-apps.html" class="text-sm text-gray-500 hover:text-gray-800" data-i18n="nav.mobile">Mobile Apps</a>
+                    <a href="pc-apps.html" class="text-sm text-gray-500 hover:text-gray-800" data-i18n="nav.pc">PC Apps</a>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                    <a href="mailto:matt@zbens.com" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md text-sm font-medium">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-xl mx-auto px-4 pt-28 pb-16">
+        <h1 class="text-3xl font-extrabold text-gray-900" data-i18n="feedback.title">Product feedback</h1>
+        <p class="mt-3 text-gray-600" data-i18n="feedback.lead">Tell us what to improve. Messages are stored securely and reviewed by the ZBENS team. We reply via NetEase enterprise email when needed.</p>
+
+        <form id="feedback-form" class="mt-8 space-y-5 bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <div>
+                <label class="block text-sm font-medium text-gray-700" data-i18n="feedback.app">App / product</label>
+                <select name="appId" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm border px-3 py-2">
+                    <option value="hdrecover">HDRECOVER</option>
+                    <option value="smart-noise-monitor">Smart Noise Monitor</option>
+                    <option value="skincare-cycle">Skincare Cycle</option>
+                    <option value="kitchen-sync">Kitchen Sync</option>
+                    <option value="website">Website</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700" data-i18n="feedback.email">Email (optional)</label>
+                <input type="email" name="email" class="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2" autocomplete="email">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700" data-i18n="feedback.rating">Rating (optional)</label>
+                <select name="rating" class="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2">
+                    <option value="" data-i18n="feedback.rating_none">No rating</option>
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
+                </select>
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700" data-i18n="feedback.message">Your message</label>
+                <textarea name="message" required rows="5" maxlength="4000" class="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2"></textarea>
+            </div>
+
+            <!-- Replace data-sitekey after creating Turnstile widget in Cloudflare Dashboard -->
+            <div class="cf-turnstile" data-sitekey="TURNSTILE_SITE_KEY" data-theme="light"></div>
+
+            <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 rounded-md" data-i18n="feedback.submit">Send feedback</button>
+            <p id="feedback-status" class="text-sm text-center hidden" role="status"></p>
+        </form>
+    </main>
+
+    <script src="/js/i18n.js"></script>
+    <script src="/js/site-chrome.js"></script>
+    <script>
+      (function () {
+        const form = document.getElementById('feedback-form');
+        const status = document.getElementById('feedback-status');
+        const siteKey = document.querySelector('.cf-turnstile')?.getAttribute('data-sitekey');
+
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          status.classList.add('hidden');
+
+          const fd = new FormData(form);
+          let turnstileToken = '';
+          if (window.turnstile && siteKey && siteKey !== 'TURNSTILE_SITE_KEY') {
+            turnstileToken = window.turnstile.getResponse() || '';
+          } else {
+            turnstileToken = 'dev-bypass';
+          }
+
+          const ratingVal = fd.get('rating');
+          const payload = {
+            appId: fd.get('appId'),
+            email: fd.get('email') || '',
+            message: fd.get('message'),
+            rating: ratingVal ? Number(ratingVal) : null,
+            locale: (window.ZbensI18n && window.ZbensI18n.detect()) || 'en',
+            turnstileToken,
+          };
+
+          try {
+            const res = await fetch('/api/feedback', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(payload),
+            });
+            const data = await res.json().catch(() => ({}));
+            status.classList.remove('hidden');
+            if (res.ok && data.ok) {
+              status.className = 'text-sm text-center text-green-700';
+              status.setAttribute('data-i18n', 'feedback.success');
+              status.textContent = 'Thanks — your feedback was saved.';
+              form.reset();
+              if (window.turnstile && siteKey && siteKey !== 'TURNSTILE_SITE_KEY') {
+                window.turnstile.reset();
+              }
+              if (window.ZbensI18n) window.ZbensI18n.apply();
+            } else {
+              status.className = 'text-sm text-center text-red-600';
+              status.setAttribute('data-i18n', 'feedback.error');
+              status.textContent = 'Could not send. Please try again or email matt@zbens.com.';
+              if (window.ZbensI18n) window.ZbensI18n.apply();
+            }
+          } catch (err) {
+            status.classList.remove('hidden');
+            status.className = 'text-sm text-center text-red-600';
+            status.textContent = 'Could not send. Please try again or email matt@zbens.com.';
+          }
+        });
+      })();
+    </script>
+</body>
+</html>
