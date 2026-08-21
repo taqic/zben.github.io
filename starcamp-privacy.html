@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Privacy Policy for StarCamp — campsite Starlink &amp; cellular signal map by ZBENS">
+  <title>Privacy Policy — StarCamp | ZBENS</title>
+  <link rel="canonical" href="https://zbens.com/starcamp-privacy.html">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f5f5f5;
+      padding: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .brand { color: #1A4A55; font-weight: 700; text-decoration: none; }
+    h1 {
+      color: #2c3e50;
+      font-size: 2.1em;
+      margin-bottom: 10px;
+      border-bottom: 3px solid #1A4A55;
+      padding-bottom: 15px;
+    }
+    h2 {
+      color: #34495e;
+      font-size: 1.4em;
+      margin-top: 36px;
+      margin-bottom: 16px;
+      padding-top: 16px;
+      border-top: 1px solid #ecf0f1;
+    }
+    p, li { margin-bottom: 12px; }
+    ul { padding-left: 1.4em; margin-bottom: 16px; }
+    .meta { color: #666; margin-bottom: 28px; }
+    .lang { margin-top: 48px; padding-top: 24px; border-top: 2px solid #eee; }
+    footer { margin-top: 40px; font-size: 0.9em; color: #777; }
+    a { color: #1A4A55; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p><a class="brand" href="index.html">ZBENS</a></p>
+    <h1>Privacy Policy — StarCamp</h1>
+    <p class="meta">
+      <strong>Last updated:</strong> 2026-08-21<br>
+      <strong>App:</strong> StarCamp (StarCamp Signal Map)<br>
+      <strong>Publisher:</strong> ZBENS<br>
+      <strong>Bundle ID:</strong> com.zbens.starcampsignalmap
+    </p>
+
+    <h2>Overview</h2>
+    <p>
+      StarCamp helps digital nomads and vanlifers understand Starlink and cellular signal
+      conditions at campsites (maps, community reports, optional AR sky-scan predictions).
+      Core browsing works with local seed data. Optional cloud features use Supabase when configured.
+    </p>
+
+    <h2>Data we may collect</h2>
+    <ul>
+      <li><strong>Account</strong> — email and optional username if you sign up (via Supabase Auth).</li>
+      <li><strong>Contributions</strong> — signal reports you submit (speeds, latency, notes, campsite id).</li>
+      <li><strong>Approximate location</strong> — only when you grant permission, used to rank nearby sites. We do not store continuous GPS trajectories.</li>
+      <li><strong>On-device</strong> — AR sky-scan results and preferences stored locally (e.g. SharedPreferences / SQLite).</li>
+      <li><strong>Map tiles</strong> — OpenStreetMap tiles may be cached on disk for offline viewing (non-iOS builds).</li>
+    </ul>
+
+    <h2>How we use data</h2>
+    <ul>
+      <li>Show campsite signal maps and community reports.</li>
+      <li>Improve meeting-fitness and obstruction predictions.</li>
+      <li>Sync offline-queued reports when you reconnect.</li>
+    </ul>
+
+    <h2>Sharing</h2>
+    <ul>
+      <li>Public campsite aggregates and reports may be visible to other users.</li>
+      <li>We do not sell personal data.</li>
+      <li>Infrastructure: Supabase (auth + database) when enabled. Push (Firebase) and crash reporting (Sentry) are optional and disabled until explicitly enabled.</li>
+    </ul>
+
+    <h2>Retention &amp; deletion</h2>
+    <ul>
+      <li>You may delete your account from the app. That removes your profile and anonymizes or deletes linked reports where technically feasible.</li>
+      <li>Local scan history can be cleared on the device.</li>
+    </ul>
+
+    <h2>Your rights</h2>
+    <p>
+      Where applicable (e.g. GDPR), you may request access, rectification, erasure, restriction, or objection.
+      Contact us via <a href="feedback.html">zbens.com/feedback.html</a> or <a href="mailto:privacy@zbens.com">privacy@zbens.com</a>.
+    </p>
+
+    <h2>Children</h2>
+    <p>StarCamp is not directed at children under 16. We do not knowingly collect personal information from children.</p>
+
+    <h2>Changes</h2>
+    <p>We may update this policy. Material changes will update the “Last updated” date on this page.</p>
+
+    <div class="lang">
+      <h1>隐私政策 — StarCamp</h1>
+      <p class="meta"><strong>最后更新：</strong> 2026-08-21</p>
+      <h2>概述</h2>
+      <p>StarCamp 帮助数字游民与 Vanlife 用户了解营地 Starlink / 蜂窝信号情况（地图、社区报告、可选 AR 天空扫描预测）。</p>
+      <h2>我们可能收集的数据</h2>
+      <ul>
+        <li>账号：注册时的邮箱与可选用户名（Supabase Auth）</li>
+        <li>你提交的信号报告</li>
+        <li>经你授权的大致位置（用于附近营地推荐；不存储连续 GPS 轨迹）</li>
+        <li>设备本地：扫描结果与偏好、地图瓦片缓存</li>
+      </ul>
+      <h2>联系</h2>
+      <p><a href="feedback.html">zbens.com/feedback.html</a> 或 <a href="mailto:privacy@zbens.com">privacy@zbens.com</a></p>
+    </div>
+
+    <footer>
+      © 2026 ZBENS · <a href="index.html">zbens.com</a>
+    </footer>
+  </div>
+</body>
+</html>
